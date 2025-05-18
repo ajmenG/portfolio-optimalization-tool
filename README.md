@@ -68,9 +68,7 @@ Portfolio Optimization Tool is an interactive financial application that helps i
 
 ## 🖼 Screenshot
 
-![Application Screenshot](https://example.com/screenshot.png)
-
-*A portfolio optimization session showing the efficient frontier and optimal portfolio weights.*
+<img src="screenshots/screenshot.png" width="800" alt="Portfolio Comparison Visualization">
 
 ---
 
