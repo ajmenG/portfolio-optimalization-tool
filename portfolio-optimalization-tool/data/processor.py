@@ -142,7 +142,8 @@ def is_valid_ticker(ticker):
     # Try to get data from yfinance
     for attempt in range(3):  # Add retry mechanism
         try:
-            st.info(f"Checking if {ticker} exists... (attempt {attempt+1}/3)")
+            if debug:
+                st.info(f"Checking if {ticker} exists... (attempt {attempt+1}/3)")
             stock = yf.Ticker(ticker)
             
             # Check multiple indicators to confirm validity
