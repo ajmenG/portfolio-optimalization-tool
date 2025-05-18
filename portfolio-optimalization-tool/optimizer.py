@@ -10,7 +10,7 @@ os.makedirs(CACHE_DIR, exist_ok=True)
 
 def fetch_data(tickers, period="2y"):
     data = {}
-    st.write("[FETCH] Pobieram", tickers[0], f"({period}) z Yahoo Finance")
+    st.write("Fetching", tickers[0], f"({period}) from Yahoo Finance")
     
     for i, t in enumerate(tickers):
         ticker_data = yf.Ticker(t)
