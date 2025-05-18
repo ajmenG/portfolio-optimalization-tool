@@ -229,7 +229,10 @@ Granica efektywna pokazuje optymalne portfolia w przestrzeni ryzyko-zwrot.
             vol_arr[i] = np.sqrt(np.dot(weights.T, np.dot(S, weights)))
             
             # Sharpe ratio
-            sharpe_arr[i] = ret_arr[i] / vol_arr[i]
+            if vol_arr[i] == 0:
+                sharpe_arr[i] = 0  # Assign 0 if volatility is zero to avoid division by zero
+            else:
+                sharpe_arr[i] = ret_arr[i] / vol_arr[i]
         
         # Plot results
         fig, ax = plt.subplots(figsize=(10, 6))
