@@ -80,7 +80,3 @@ def compute_optimal_portfolio(prices, strategy='sharpe'):
         n_assets = len(prices.columns)
         equal_weights = {col: 1.0/n_assets for col in prices.columns}
         return equal_weights, (0, 0, 0), None
-    
-    # Jeśli potrzebujesz zwrócić więcej wartości, upewnij się,
-    # że kod wywołujący obsługuje wszystkie z nich
-    # return weights, performance, ef, mu, S
